@@ -1,12 +1,28 @@
 import {
   OnlyofficeConfiguration,
   OnlyofficeEditor,
+  ToolbarConvert,
+  ToolbarCreate,
+  ToolbarMenu,
   ToolbarOpen,
 } from './components';
 import { getFormatsWithConvertOptions, getSupportedFormats } from './helpers';
 import reducers from './reducers';
 
 const applyConfig = (config) => {
+  config.settings.supportedLanguages = [ 
+    'de',
+    'en',
+    'es',
+    'fr',
+    'it',
+    'ja',
+    'nl',
+    'pt', 
+    'ru', 
+    'zh_CN',
+  ];
+  config.settings.isMultilingual = false;
 
   config.addonReducers = {
     ...(config.addonReducers || []),
@@ -16,6 +32,10 @@ const applyConfig = (config) => {
   config.settings.appExtras = [
     ...(config.settings.appExtras || []),
     {
+      component: ToolbarCreate,
+      match: '*/contents',
+    },
+    {
       component: ToolbarOpen,
       match: {
         exact: true,
@@ -23,7 +43,22 @@ const applyConfig = (config) => {
         strict: false,
       },
     },
+    {
+      component: ToolbarConvert,
+      match: {
+        exact: true,
+        path: getFormatsWithConvertOptions(),
+        strict: false,
+      },
+    },
   ];
+
+  config.settings.additionalToolbarComponents = {
+    onlyofficeToolbarMenu: {
+      component: ToolbarMenu,
+      wrapper: null,
+    },
+  };
 
   config.settings.controlpanels = [
     ...(config.settings.controlpanels || []),
