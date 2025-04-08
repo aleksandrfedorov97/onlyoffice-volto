@@ -1,8 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-04-07T12:42:16.605Z\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-07T10:19:41.979Z\n"
+"PO-Revision-Date: \n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language: \n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,69 +19,69 @@ msgstr ""
 #. Default: "Cancel"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_cancel"
-msgstr ""
+msgstr "Отмена"
 
 #. Default: "ONLYOFFICE Configuration"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_config_title"
-msgstr ""
+msgstr "Настройка ONLYOFFICE"
 
 #. Default: "Save"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_save"
-msgstr ""
+msgstr "Сохранить"
 
 #. Default: "Settings successfully saved"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_success_message"
-msgstr ""
+msgstr "Настройки успешно сохранены"
 
 #. Default: "Convert"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_title"
-msgstr ""
+msgstr "Конвертировать"
 
 #. Default: "Select file type you want to download"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_type_description"
-msgstr ""
+msgstr "Выберите тип файла, который вы хотите скачать"
 
 #. Default: "Target type:"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_type_title"
-msgstr ""
+msgstr "Целевой тип:"
 
 #. Default: "Create in ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
-msgstr ""
+msgstr "Создать в ONLYOFFICE"
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_cell"
-msgstr ""
+msgstr "Таблица"
 
 #. Default: "PDF form"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_pdf"
-msgstr ""
+msgstr "PDF форма"
 
 #. Default: "Presentation"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_slide"
-msgstr ""
+msgstr "Презентация"
 
 #. Default: "Create in ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
-msgstr ""
+msgstr "Создать в ONLYOFFICE"
 
 #. Default: "Document"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_word"
-msgstr ""
+msgstr "Документ"
 
 #. Default: "Open in ONLYOFFICE"
 #: components/ToolbarOpen
 msgid "onlyoffice_open_title"
-msgstr ""
+msgstr "Открыть в ONLYOFFICE"

@@ -1,12 +1,87 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2025-04-07T10:19:41.979Z\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language: en\n"
-"Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Language: \n"
+"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#. Default: "Cancel"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_cancel"
+msgstr ""
+
+#. Default: "ONLYOFFICE Configuration"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_config_title"
+msgstr ""
+
+#. Default: "Save"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_save"
+msgstr ""
+
+#. Default: "Settings successfully saved"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_success_message"
+msgstr ""
+
+#. Default: "Convert"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_title"
+msgstr ""
+
+#. Default: "Select file type you want to download"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_type_description"
+msgstr ""
+
+#. Default: "Target type:"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_type_title"
+msgstr ""
+
+#. Default: "Create in ONLYOFFICE"
+#: components/ToolbarCreate
+msgid "onlyoffice_create_title"
+msgstr ""
+
+#. Default: "Spreadsheet"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_cell"
+msgstr ""
+
+#. Default: "PDF form"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_pdf"
+msgstr ""
+
+#. Default: "Presentation"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_slide"
+msgstr ""
+
+#. Default: "Create in ONLYOFFICE"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_title"
+msgstr ""
+
+#. Default: "Document"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_word"
+msgstr ""
+
+#. Default: "Open in ONLYOFFICE"
+#: components/ToolbarOpen
+msgid "onlyoffice_open_title"
+msgstr ""

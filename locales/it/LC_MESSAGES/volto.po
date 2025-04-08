@@ -1,84 +1,88 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2025-04-07T12:42:16.605Z\n"
-"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
-"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-14 10:33+0000\n"
+"PO-Revision-Date: 2022-10-07 18:55+0300\n"
+"Last-Translator: \n"
+"Language: it\n"
+"Language-Team: \n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
-"Preferred-Encodings: utf-8\n"
-"Domain: volto\n"
+"Language-Code: it\n"
+"Language-Name: Italiano\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Default: "Cancel"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. Default: "ONLYOFFICE Configuration"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_config_title"
-msgstr ""
+msgstr "Configurazione ONLYOFFICE"
 
 #. Default: "Save"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_save"
-msgstr ""
+msgstr "Salva"
 
 #. Default: "Settings successfully saved"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_success_message"
-msgstr ""
+msgstr "Impostazioni salvate con successo"
 
 #. Default: "Convert"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_title"
-msgstr ""
+msgstr "Converti"
 
 #. Default: "Select file type you want to download"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_type_description"
-msgstr ""
+msgstr "Seleziona il tipo di file che vuoi scaricare"
 
 #. Default: "Target type:"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_type_title"
-msgstr ""
+msgstr "Tipo di destinazione:"
 
 #. Default: "Create in ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
-msgstr ""
+msgstr "Crea in ONLYOFFICE"
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_cell"
-msgstr ""
+msgstr "Foglio di calcolo"
 
 #. Default: "PDF form"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_pdf"
-msgstr ""
+msgstr "Modulo PDF"
 
 #. Default: "Presentation"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_slide"
-msgstr ""
+msgstr "Presentazione"
 
 #. Default: "Create in ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
-msgstr ""
+msgstr "Crea in ONLYOFFICE"
 
 #. Default: "Document"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_word"
-msgstr ""
+msgstr "Documento"
 
 #. Default: "Open in ONLYOFFICE"
 #: components/ToolbarOpen
 msgid "onlyoffice_open_title"
-msgstr ""
+msgstr "Apri in ONLYOFFICE"
