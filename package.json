@@ -1,0 +1,35 @@
+{
+  "name": "onlyoffice-volto",
+  "version": "1.0.0-alpha.0",
+  "description": "This addon allows users to edit office documents within Plone Volto using ONLYOFFICE Docs packaged as Document Server - Community or Enterprise Edition.",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+  "keywords": [
+    "onlyoffice-volto",
+    "onlyoffice",
+    "volto",
+    "plone"
+  ],
+  "author": "integration@onlyoffice.com",
+  "homepage": "https://github.com/ONLYOFFICE/onlyoffice-volto",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ONLYOFFICE/onlyoffice-volto.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
+  },
+  "dependencies": {
+    "@plone/scripts": "*"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.1"
+  }
+}
