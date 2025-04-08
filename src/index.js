@@ -1,12 +1,29 @@
-import { OnlyofficeConfiguration } from './components';
+import {
+  OnlyofficeConfiguration,
+  OnlyofficeEditor,
+  ToolbarOpen,
+} from './components';
+import { getFormatsWithConvertOptions, getSupportedFormats } from './helpers';
 import reducers from './reducers';
 
 const applyConfig = (config) => {
 
   config.addonReducers = {
     ...(config.addonReducers || []),
-    ...reducers
+    ...reducers,
   };
+
+  config.settings.appExtras = [
+    ...(config.settings.appExtras || []),
+    {
+      component: ToolbarOpen,
+      match: {
+        exact: true,
+        path: getSupportedFormats(),
+        strict: false,
+      },
+    },
+  ];
 
   config.settings.controlpanels = [
     ...(config.settings.controlpanels || []),
@@ -14,7 +31,7 @@ const applyConfig = (config) => {
       '@id': '/onlyoffice-configuration',
       group: 'Add-on Configuration',
       title: 'ONLYOFFICE Configuration',
-    }
+    },
   ];
 
   config.addonRoutes = [
@@ -22,7 +39,11 @@ const applyConfig = (config) => {
     {
       component: OnlyofficeConfiguration,
       path: '/controlpanel/onlyoffice-configuration',
-    }
+    },
+    {
+      component: OnlyofficeEditor,
+      path: '*/onlyoffice-edit',
+    },
   ];
 
   return config;

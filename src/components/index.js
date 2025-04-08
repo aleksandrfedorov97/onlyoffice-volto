@@ -1,3 +1,9 @@
-import OnlyofficeConfiguration from "./Views/OnlyofficeConfiguration";
+import ToolbarOpen from './ToolbarOpen';
+import OnlyofficeConfiguration from './Views/OnlyofficeConfiguration';
+import OnlyofficeEditor from './Views/OnlyofficeEditor';
 
-export { OnlyofficeConfiguration };
+export {
+  OnlyofficeConfiguration,
+  OnlyofficeEditor,
+  ToolbarOpen,
+};
