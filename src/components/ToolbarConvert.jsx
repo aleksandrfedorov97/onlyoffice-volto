@@ -48,6 +48,7 @@ const ToolbarConvert = ({ token }) => {
         setConvertError(null);
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, __CLIENT__]);
 
   useEffect(() => {

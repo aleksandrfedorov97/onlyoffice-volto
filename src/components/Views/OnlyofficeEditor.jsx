@@ -62,6 +62,7 @@ const OnlyofficeEditor = () => {
         return;
       }
 
+      // eslint-disable-next-line no-undef
       const docsVersion = DocsAPI.DocEditor.version().split('.');
       const majorVersion = parseInt(docsVersion[0], 10);
       const minorVersion = parseInt(docsVersion[1], 10);
@@ -84,11 +85,13 @@ const OnlyofficeEditor = () => {
         return;
       }
 
+      // eslint-disable-next-line no-undef
       docEditor = new DocsAPI.DocEditor('onlyofficeEditor', editorConfig);
     };
 
     script.onload = initializeEditor;
     script.onerror = (error) => {
+      // eslint-disable-next-line no-console
       console.error('Failed to load ONLYOFFICE script:', error);
     };
 

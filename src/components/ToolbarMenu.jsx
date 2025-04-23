@@ -52,6 +52,7 @@ const ToolbarMenu = () => {
         dispatch(resetCreatedFileState());
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, pathname, __CLIENT__]);
 
   if (!__CLIENT__ || (__CLIENT__ && !token)) {
@@ -78,6 +79,7 @@ const ToolbarMenu = () => {
         <ul>
           {map(DOCUMENT_TYPES, (documentType) => {
             const t = documentType.toLowerCase();
+            // eslint-disable-next-line no-unused-vars
             const name = getDefaultNameByType(t);
             return (
               <li key={`onlyoffice-list-item-${t}`}>

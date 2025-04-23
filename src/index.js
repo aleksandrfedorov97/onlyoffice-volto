@@ -10,7 +10,7 @@ import { getFormatsWithConvertOptions, getSupportedFormats } from './helpers';
 import reducers from './reducers';
 
 const applyConfig = (config) => {
-  config.settings.supportedLanguages = [ 
+  config.settings.supportedLanguages = [
     'de',
     'en',
     'es',
@@ -18,8 +18,8 @@ const applyConfig = (config) => {
     'it',
     'ja',
     'nl',
-    'pt', 
-    'ru', 
+    'pt',
+    'ru',
     'zh_CN',
   ];
   config.settings.isMultilingual = false;

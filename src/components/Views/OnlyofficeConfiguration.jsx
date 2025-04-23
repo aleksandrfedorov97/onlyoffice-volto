@@ -13,7 +13,6 @@ import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { compose } from 'redux';
 import {
   Button,
   Checkbox,
