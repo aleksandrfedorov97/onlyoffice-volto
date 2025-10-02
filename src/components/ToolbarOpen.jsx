@@ -1,6 +1,6 @@
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import editingSVG from '@plone/volto/icons/editing.svg';
+import onlyofficeOpen from 'onlyoffice-volto/icons/onlyoffice-open.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
@@ -28,8 +28,7 @@ const ToolbarOpen = ({ token }) => {
       <div className=" toolbar-onlyoffice-open" id="toolbar-onlyoffice-open">
         <Link to={`${path}/onlyoffice-edit`}>
           <Icon
-            name={editingSVG}
-            className="circled"
+            name={onlyofficeOpen}
             size="30px"
             title={intl.formatMessage(messages.onlyofficeOpenTitle)}
           />

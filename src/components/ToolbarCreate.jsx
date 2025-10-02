@@ -1,6 +1,6 @@
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import addDocumentSVG from '@plone/volto/icons/add-document.svg';
+import onlyofficeCreate from 'onlyoffice-volto/icons/onlyoffice-create.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
@@ -20,21 +20,26 @@ const ToolbarCreate = (props) => {
     return null;
   }
 
+  let cb = null;
   return (
     <>
-      <Plug pluggable="main.toolbar.bottom" id="onlyoffice-menu">
+      <Plug pluggable="main.toolbar.bottom" id="onlyoffice-menu-blank">
         {({ onClickHandler }) => {
+          cb = onClickHandler;
+        }}
+      </Plug>
+      <Plug pluggable="main.toolbar.top" id="onlyoffice-menu">
+        {() => {
           return (
             <button
               className="show-onlyoffice-toolbar-menu"
               aria-label={intl.formatMessage(messages.onlyofficeCreateTitle)}
-              onClick={(e) => onClickHandler(e, 'onlyofficeToolbarMenu')}
+              onClick={(e) => cb(e, 'onlyofficeToolbarMenu')}
               tabIndex={0}
               id="show-onlyoffice-toolbar-menu"
             >
               <Icon
-                name={addDocumentSVG}
-                className="circled"
+                name={onlyofficeCreate}
                 size="30px"
                 title={intl.formatMessage(messages.onlyofficeCreateTitle)}
               />

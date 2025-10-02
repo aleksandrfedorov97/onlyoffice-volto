@@ -1,7 +1,7 @@
 import { ModalForm } from '@plone/volto/components/manage/Form';
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import editingSVG from '@plone/volto/icons/editing.svg';
+import onlyofficeConvertSVG from 'onlyoffice-volto/icons/onlyoffice-convert.svg';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
@@ -108,8 +108,7 @@ const ToolbarConvert = ({ token }) => {
             aria-label={intl.formatMessage(messages.onlyofficeConvertTitle)}
           >
             <Icon
-              name={editingSVG}
-              className="circled"
+              name={onlyofficeConvertSVG}
               size="30px"
               title={intl.formatMessage(messages.onlyofficeConvertTitle)}
             />

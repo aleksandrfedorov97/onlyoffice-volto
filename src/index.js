@@ -7,6 +7,7 @@ import {
   ToolbarOpen,
 } from './components';
 import { getFormatsWithConvertOptions, getSupportedFormats } from './helpers';
+import onlyofficeControlpanel from 'onlyoffice-volto/icons/onlyoffice-controlpanel.svg';
 import reducers from './reducers';
 
 const applyConfig = (config) => {
@@ -68,6 +69,9 @@ const applyConfig = (config) => {
       title: 'ONLYOFFICE Configuration',
     },
   ];
+
+  config.settings.controlPanelsIcons['onlyoffice-configuration'] =
+    onlyofficeControlpanel;
 
   config.addonRoutes = [
     ...config.addonRoutes,
