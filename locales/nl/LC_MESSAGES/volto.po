@@ -52,7 +52,7 @@ msgstr "Selecteer het bestandstype dat u wilt downloaden"
 msgid "onlyoffice_convert_type_title"
 msgstr "Doeltype:"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
 msgstr "Aanmaken in ONLYOFFICE"
@@ -72,7 +72,7 @@ msgstr "PDF-formulier"
 msgid "onlyoffice_menu_slide"
 msgstr "Presentatie"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
 msgstr "Aanmaken in ONLYOFFICE"

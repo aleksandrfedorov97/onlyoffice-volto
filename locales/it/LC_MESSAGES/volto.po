@@ -52,10 +52,10 @@ msgstr "Seleziona il tipo di file che vuoi scaricare"
 msgid "onlyoffice_convert_type_title"
 msgstr "Tipo di destinazione:"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
-msgstr "Crea in ONLYOFFICE"
+msgstr "Crea con ONLYOFFICE"
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
@@ -72,10 +72,10 @@ msgstr "Modulo PDF"
 msgid "onlyoffice_menu_slide"
 msgstr "Presentazione"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
-msgstr "Crea in ONLYOFFICE"
+msgstr "Crea con ONLYOFFICE"
 
 #. Default: "Document"
 #: components/ToolbarMenu

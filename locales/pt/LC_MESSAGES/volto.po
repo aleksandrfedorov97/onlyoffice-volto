@@ -52,10 +52,10 @@ msgstr "Selecione o tipo de ficheiro que deseja transferir"
 msgid "onlyoffice_convert_type_title"
 msgstr "Tipo de destino:"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
-msgstr "Criar no ONLYOFFICE"
+msgstr "Criar com o ONLYOFFICE"
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
@@ -72,10 +72,10 @@ msgstr "Formulário PDF"
 msgid "onlyoffice_menu_slide"
 msgstr "Apresentação"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
-msgstr "Criar no ONLYOFFICE"
+msgstr "Criar com o ONLYOFFICE"
 
 #. Default: "Document"
 #: components/ToolbarMenu

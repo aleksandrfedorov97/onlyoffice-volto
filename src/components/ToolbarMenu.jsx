@@ -72,7 +72,7 @@ const ToolbarMenu = () => {
       <header>
         <FormattedMessage
           id="onlyoffice_menu_title"
-          defaultMessage="Create in ONLYOFFICE"
+          defaultMessage="Create with ONLYOFFICE"
         />
       </header>
       <div className="pastanaga-menu-list">

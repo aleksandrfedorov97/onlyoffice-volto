@@ -52,10 +52,10 @@ msgstr "ダウンロードしたいファイルを選択してください"
 msgid "onlyoffice_convert_type_title"
 msgstr "ターゲットタイプ:"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
-msgstr "ONLYOFFICEで作成"
+msgstr "ONLYOFFICEで作成する"
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
@@ -72,10 +72,10 @@ msgstr "PDFフォーム"
 msgid "onlyoffice_menu_slide"
 msgstr "プレゼンテーション"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
-msgstr "ONLYOFFICEで作成"
+msgstr "ONLYOFFICEで作成する"
 
 #. Default: "Document"
 #: components/ToolbarMenu

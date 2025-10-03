@@ -51,7 +51,7 @@ msgstr "Выберите тип файла, который вы хотите с�
 msgid "onlyoffice_convert_type_title"
 msgstr "Целевой тип:"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
 msgstr "Создать в ONLYOFFICE"
@@ -71,7 +71,7 @@ msgstr "PDF форма"
 msgid "onlyoffice_menu_slide"
 msgstr "Презентация"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
 msgstr "Создать в ONLYOFFICE"

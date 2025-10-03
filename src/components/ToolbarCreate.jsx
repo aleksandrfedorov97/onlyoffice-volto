@@ -7,7 +7,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   onlyofficeCreateTitle: {
-    defaultMessage: 'Create in ONLYOFFICE',
+    defaultMessage: 'Create with ONLYOFFICE',
     id: 'onlyoffice_create_title',
   },
 });

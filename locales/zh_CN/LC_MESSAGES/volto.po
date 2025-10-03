@@ -51,7 +51,7 @@ msgstr "选择您要下载的文件类型"
 msgid "onlyoffice_convert_type_title"
 msgstr "目标类型："
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
 msgstr "在ONLYOFFICE中创建"
@@ -71,7 +71,7 @@ msgstr "PDF表单"
 msgid "onlyoffice_menu_slide"
 msgstr "演示文稿"
 
-#. Default: "Create in ONLYOFFICE"
+#. Default: "Create with ONLYOFFICE"
 #: components/ToolbarMenu
 msgid "onlyoffice_menu_title"
 msgstr "在ONLYOFFICE中创建"
