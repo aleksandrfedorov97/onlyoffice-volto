@@ -141,6 +141,10 @@ const OnlyofficeConfiguration = ({ intl }) => {
     return <Unauthorized />;
   }
 
+  if (!onlyofficeForms) {
+    return <></>;
+  }
+
   return (
     <>
       <Helmet
@@ -176,6 +180,52 @@ const OnlyofficeConfiguration = ({ intl }) => {
 
                   <Grid.Row stretched>
                     <Grid.Column>
+                      <Field
+                        disabled={demoEnabled}
+                        id="jwt-secret"
+                        title={
+                          find(forms, { name: 'onlyoffice.plone.jwtSecret' })
+                            ?.schema?.properties?.title
+                        }
+                        value={jwtSecret}
+                        onChange={(_, v) => setJwtSecret(v)}
+                      />
+                    </Grid.Column>
+                  </Grid.Row>
+
+                  <Grid.Row stretched>
+                    <Grid.Column>
+                      <Field
+                        id="doc-inner-url"
+                        title={
+                          find(forms, { name: 'onlyoffice.plone.docInnerUrl' })
+                            ?.schema?.properties?.title
+                        }
+                        value={docInnerUrl}
+                        required
+                        onChange={(_, v) => setDocInnerUrl(v)}
+                      />
+                    </Grid.Column>
+                  </Grid.Row>
+
+                  <Grid.Row stretched>
+                    <Grid.Column>
+                      <Field
+                        disabled={demoEnabled}
+                        id="plone-url"
+                        title={
+                          find(forms, { name: 'onlyoffice.plone.ploneUrl' })
+                            ?.schema?.properties?.title
+                        }
+                        value={ploneUrl}
+                        required
+                        onChange={(_, v) => setPloneUrl(v)}
+                      />
+                    </Grid.Column>
+                  </Grid.Row>
+
+                  <Grid.Row stretched>
+                    <Grid.Column>
                       <Segment attached>
                         <Form.Field>
                           <Checkbox
@@ -204,50 +254,6 @@ const OnlyofficeConfiguration = ({ intl }) => {
                           }
                         </p>
                       </Segment>
-                    </Grid.Column>
-                  </Grid.Row>
-
-                  <Grid.Row stretched>
-                    <Grid.Column>
-                      <Field
-                        disabled={demoEnabled}
-                        id="jwt-secret"
-                        title={
-                          find(forms, { name: 'onlyoffice.plone.jwtSecret' })
-                            ?.schema?.properties?.title
-                        }
-                        value={jwtSecret}
-                        onChange={(_, v) => setJwtSecret(v)}
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-
-                  <Grid.Row stretched>
-                    <Grid.Column>
-                      <Field
-                        id="doc-inner-url"
-                        title={
-                          find(forms, { name: 'onlyoffice.plone.docInnerUrl' })
-                            ?.schema?.properties?.title
-                        }
-                        value={docInnerUrl}
-                        onChange={(_, v) => setDocInnerUrl(v)}
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-
-                  <Grid.Row stretched>
-                    <Grid.Column>
-                      <Field
-                        disabled={demoEnabled}
-                        id="plone-url"
-                        title={
-                          find(forms, { name: 'onlyoffice.plone.ploneUrl' })
-                            ?.schema?.properties?.title
-                        }
-                        value={ploneUrl}
-                        onChange={(_, v) => setPloneUrl(v)}
-                      />
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
