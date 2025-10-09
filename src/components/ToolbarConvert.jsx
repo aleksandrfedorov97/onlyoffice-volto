@@ -1,16 +1,25 @@
-import { ModalForm } from '@plone/volto/components/manage/Form';
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import onlyofficeConvertSVG from 'onlyoffice-volto/icons/onlyoffice-convert.svg';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { defineMessages, useIntl } from 'react-intl';
+import { FormattedMessage, defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
-
+import {
+  Button,
+  Header,
+  Message,
+  Modal,
+  Dimmer,
+  Loader,
+  Form,
+} from 'semantic-ui-react';
 import { convertFile, resetConvertedFileState } from '../actions';
 import { getConvertOptionsForFormat } from '../helpers';
+import { Field } from '@plone/volto/components/manage/Form';
+import aheadSVG from '@plone/volto/icons/ahead.svg';
+import clearSVG from '@plone/volto/icons/clear.svg';
 
 const messages = defineMessages({
   onlyofficeConvertTitle: {
@@ -25,6 +34,14 @@ const messages = defineMessages({
     defaultMessage: 'Target type:',
     id: 'onlyoffice_convert_type_title',
   },
+  save: {
+    id: 'Save',
+    defaultMessage: 'Save',
+  },
+  cancel: {
+    id: 'Cancel',
+    defaultMessage: 'Cancel',
+  },
 });
 
 const ToolbarConvert = ({ token }) => {
@@ -35,6 +52,8 @@ const ToolbarConvert = ({ token }) => {
   const [convertModalOpen, setConvertModalOpen] = useState(false);
   const [convertError, setConvertError] = useState(null);
   const [convertFormats, setConvertFormats] = useState([]);
+  const [selectedFormat, setSelectedFormat] = useState(null);
+  const [field, setField] = useState({});
 
   const onlyofficeConvert = useSelector((state) => state.onlyofficeConvert);
   const data = useSelector((state) => state.content.data);
@@ -86,13 +105,37 @@ const ToolbarConvert = ({ token }) => {
     }
   }, [onlyofficeConvert]);
 
-  const handleConvert = (formData) => {
-    dispatch(convertFile(pathname, formData.targetType));
+  useEffect(() => {
+    setField({
+      ...{
+        choices: convertFormats.map((type) => [type, type]),
+        description: intl.formatMessage(
+          messages.onlyofficeConvertTypeDescription,
+        ),
+        title: intl.formatMessage(messages.onlyofficeConvertTypeTitle),
+        type: 'string',
+      },
+      id: 'targetType',
+      value: selectedFormat,
+      onChange: onChangeField,
+    });
+  }, [convertFormats, selectedFormat]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+    dispatch(convertFile(pathname, selectedFormat));
   };
 
   if (!__CLIENT__ || (__CLIENT__ && !token)) {
     return null;
   }
+
+  const onChangeField = (id, value) => {
+    setSelectedFormat(value);
+  };
+
+  const onCancel = () => setConvertModalOpen(false);
 
   return (
     <>
@@ -117,33 +160,59 @@ const ToolbarConvert = ({ token }) => {
       </Plug>
 
       {convertModalOpen && convertFormats.length > 0 && (
-        <ModalForm
-          open={convertModalOpen}
-          loading={onlyofficeConvert.loading}
-          onSubmit={handleConvert}
-          onCancel={() => setConvertModalOpen(false)}
-          title={intl.formatMessage(messages.onlyofficeConvertTitle)}
-          submitError={convertError}
-          schema={{
-            fieldsets: [
-              {
-                fields: ['targetType'],
-                id: 'default',
-              },
-            ],
-            properties: {
-              targetType: {
-                choices: convertFormats.map((type) => [type, type]),
-                description: intl.formatMessage(
-                  messages.onlyofficeConvertTypeDescription,
-                ),
-                title: intl.formatMessage(messages.onlyofficeConvertTypeTitle),
-                type: 'string',
-              },
-            },
-            required: ['targetType'],
-          }}
-        />
+        <Modal open={convertModalOpen}>
+          <Header>{intl.formatMessage(messages.onlyofficeConvertTitle)}</Header>
+          <Dimmer active={onlyofficeConvert.loading}>
+            <Loader>
+              {<FormattedMessage id="Loading" defaultMessage="Loading." />}
+            </Loader>
+          </Dimmer>
+          <Modal.Content scrolling style={{ height: '100vh' }}>
+            <Form onSubmit={onSubmit} error={Boolean(convertError)}>
+              {convertError ? (
+                <Message error>
+                  <FormattedMessage
+                    id="There were some errors."
+                    defaultMessage="There were some errors."
+                  />
+                  <div>{convertError}</div>
+                </Message>
+              ) : (
+                <> </>
+              )}
+              <Field {...field} key={field.id} />
+            </Form>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button
+              basic
+              circular
+              primary
+              floated="right"
+              aria-label={intl.formatMessage(messages.save)}
+              title={intl.formatMessage(messages.save)}
+              onClick={onSubmit}
+              loading={onlyofficeConvert.loading}
+              disabled={!selectedFormat}
+            >
+              <Icon name={aheadSVG} className="contents circled" size="30px" />
+            </Button>
+            {onCancel && (
+              <Button
+                type="button"
+                basic
+                circular
+                secondary
+                aria-label={intl.formatMessage(messages.cancel)}
+                title={intl.formatMessage(messages.cancel)}
+                floated="right"
+                onClick={onCancel}
+              >
+                <Icon name={clearSVG} className="circled" size="30px" />
+              </Button>
+            )}
+          </Modal.Actions>
+        </Modal>
       )}
     </>
   );
