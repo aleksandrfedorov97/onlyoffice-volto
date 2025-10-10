@@ -134,11 +134,10 @@ const ToolbarConvert = ({ token }) => {
       value: selectedFormat,
       onChange: onChangeField,
     });
-  }, [convertFormats, selectedFormat]);
+  }, [intl, convertFormats, selectedFormat]);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
     dispatch(convertFile(pathname, selectedFormat));
   };
 
