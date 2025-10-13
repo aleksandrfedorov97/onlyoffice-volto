@@ -6,7 +6,7 @@ Volto is a modern interface for Plone. Learn more about Volto [here](https://plo
 
 ## Add-on installation 📥
 
-### Option 1: Generating a new addon
+### Option 1: Generating a new add-on
 
 **Step 1: Add dependencies**
 
